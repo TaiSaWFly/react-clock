@@ -1,0 +1,86 @@
+// main: ../index.less
+
+.clock {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-item {
+  display: flex;
+  justify-content: space-around;
+
+  text-transform: uppercase;
+  padding: 3rem 0;
+
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.705) 1px 1px 100px;
+  background: #000;
+}
+
+.item {
+  color: #fff;
+  min-width: 160px;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 5.5px;
+    height: 5.5px;
+
+    border-radius: 5px;
+    background-color: #474d4b;
+
+    position: absolute;
+    top: 40%;
+    left: 103%;
+    transform: translateX(-142%);
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 5.5px;
+    height: 5.5px;
+
+    border-radius: 5px;
+    background-color: #474d4b;
+
+    position: absolute;
+    top: 60%;
+    left: 103%;
+    transform: translateX(-142%);
+    z-index: 1;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  &:last-child::before {
+    display: none;
+  }
+}
+
+.title-item {
+  position: relative;
+}
+
+.title-description {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #474d4b;
+}
